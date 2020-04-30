@@ -1,0 +1,13 @@
+node_modules/
+packages/
+.vscode/
+settings.json
+production.json
+prod.json
+staging.json
+development.json
+dev.json
+local.
+
+.deploy_stage
+.env.sh
