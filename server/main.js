@@ -1,4 +1,5 @@
 import Empirica from 'meteor/empirica:core';
+import logger from './logger';
 import './bots';
 import './callbacks';
 
@@ -10,6 +11,8 @@ import './callbacks';
 // rounds and stages (with get/set methods), that will be able to use later in
 // the game.
 Empirica.gameInit(game => {
+  logger.log({ level: 'info', message: 'Game initializing.' });
+
   game.players.forEach(player => {
     player.set('avatar', `/avatars/jdenticon/${player._id}`);
     player.set('score', 0);
