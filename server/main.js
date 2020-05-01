@@ -1,6 +1,6 @@
-import Empirica from "meteor/empirica:core";
-import "./bots.js";
-import "./callbacks.js";
+import Empirica from 'meteor/empirica:core';
+import './bots';
+import './callbacks';
 
 // gameInit is where the structure of a game is defined.
 // Just before every game starts, once all the players needed are ready, this
@@ -10,17 +10,17 @@ import "./callbacks.js";
 // rounds and stages (with get/set methods), that will be able to use later in
 // the game.
 Empirica.gameInit(game => {
-  game.players.forEach((player, i) => {
-    player.set("avatar", `/avatars/jdenticon/${player._id}`);
-    player.set("score", 0);
+  game.players.forEach(player => {
+    player.set('avatar', `/avatars/jdenticon/${player._id}`);
+    player.set('score', 0);
   });
 
-  _.times(10, i => {
+  _.times(10, () => {
     const round = game.addRound();
     round.addStage({
-      name: "response",
-      displayName: "Response",
-      durationInSeconds: 120
+      name: 'response',
+      displayName: 'Response',
+      durationInSeconds: 120,
     });
   });
 });

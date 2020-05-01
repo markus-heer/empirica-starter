@@ -1,13 +1,7 @@
-import React from "react";
+import React from 'react';
 
-export default class TaskStimulus extends React.Component {
-  render() {
-    const { round, stage, player } = this.props;
+const TaskStimulus = () => (
+  <div className="task-stimulus">Welcome to Empirica! Try changing the slider.</div>
+);
 
-    return (
-      <div className="task-stimulus">
-        Welcome to Empirica! Try changing the slider.
-      </div>
-    );
-  }
-}
+export default TaskStimulus;

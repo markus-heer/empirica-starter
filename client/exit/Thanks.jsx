@@ -1,17 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { Centered } from "meteor/empirica:core";
+const Thanks = () => (
+  <div className="finished">
+    <div>
+      <h4>Finished!</h4>
+      <p>Thank you for participating!</p>
+    </div>
+  </div>
+);
 
-export default class Thanks extends React.Component {
-  static stepName = "Thanks";
-  render() {
-    return (
-      <div className="finished">
-        <div>
-          <h4>Finished!</h4>
-          <p>Thank you for participating!</p>
-        </div>
-      </div>
-    );
-  }
-}
+Thanks.stepName = 'Thanks';
+
+export default Thanks;

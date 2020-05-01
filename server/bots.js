@@ -1,13 +1,14 @@
-import Empirica from "meteor/empirica:core";
+import Empirica from 'meteor/empirica:core';
 
 // This is where you add bots, like Bob:
 
-Empirica.bot("bob", {
+Empirica.bot('bob', {
   // // NOT SUPPORTED Called at the beginning of each stage (after onRoundStart/onStageStart)
   // onStageStart(bot, game, round, stage, players) {},
 
   // Called during each stage at tick interval (~1s at the moment)
-  onStageTick(bot, game, round, stage, secondsRemaining) {}
+  // eslint-disable-next-line no-unused-vars
+  onStageTick(bot, game, round, stage, secondsRemaining) {},
 
   // // NOT SUPPORTED A player has changed a value
   // // This might happen a lot!

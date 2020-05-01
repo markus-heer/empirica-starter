@@ -1,13 +1,13 @@
-import Empirica from "meteor/empirica:core";
-import { render } from "react-dom";
-import ExitSurvey from "./exit/ExitSurvey";
-import Thanks from "./exit/Thanks";
-import About from "./game/About";
-import Round from "./game/Round";
-import Consent from "./intro/Consent";
-import InstructionStepOne from "./intro/InstructionStepOne";
-import InstructionStepTwo from "./intro/InstructionStepTwo";
-import Quiz from "./intro/Quiz";
+import Empirica from 'meteor/empirica:core';
+import { render } from 'react-dom';
+import ExitSurvey from './exit/ExitSurvey';
+import Thanks from './exit/Thanks';
+import About from './game/About';
+import Round from './game/Round';
+import Consent from './intro/Consent';
+import InstructionStepOne from './intro/InstructionStepOne';
+import InstructionStepTwo from './intro/InstructionStepTwo';
+import Quiz from './intro/Quiz';
 
 // Set the About Component you want to use for the About dialog (optional).
 Empirica.about(About);
@@ -40,6 +40,7 @@ Empirica.round(Round);
 // user if they come back to the website.
 // If you don't return anything, or do not define this function, a default
 // exit screen will be shown.
+// eslint-disable-next-line no-unused-vars
 Empirica.exitSteps((game, player) => {
   return [ExitSurvey, Thanks];
 });
@@ -49,5 +50,5 @@ Empirica.exitSteps((game, player) => {
 // Empirica.introSteps(), ...).
 // It is required and usually does not need changing.
 Meteor.startup(() => {
-  render(Empirica.routes(), document.getElementById("app"));
+  render(Empirica.routes(), document.getElementById('app'));
 });
