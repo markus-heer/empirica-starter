@@ -4,7 +4,7 @@ import { Centered, ConsentButton } from 'meteor/empirica:core';
 
 const Consent = () => (
   <Centered>
-    <div className="consent">
+    <div>
       <h1> Consent Form </h1>
       <p>
         This experiment is part of a MIT scientific project. Your decision to participate in this

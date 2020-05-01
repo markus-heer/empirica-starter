@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Centered } from 'meteor/empirica:core';
+import { Label, Input, Button } from '../shared/StyledComponents';
 
 const Quiz = ({ hasPrev, onNext, onPrev }) => {
   const [answers, setAnswers] = useState({ sum: '', horse: '' });
@@ -23,46 +24,44 @@ const Quiz = ({ hasPrev, onNext, onPrev }) => {
 
   return (
     <Centered>
-      <div className="quiz">
-        <h1> Quiz </h1>
-        <form onSubmit={handleSubmit}>
-          <p>
-            <label htmlFor="sum">What is 2+2?</label>
-            <input
-              type="text"
-              dir="auto"
-              id="sum"
-              name="sum"
-              placeholder="e.g. 3"
-              value={answers.sum}
-              onChange={handleChange}
-              autoComplete="off"
-              required
-            />
-          </p>
-          <p>
-            <label htmlFor="horse">What color was Napoleon&apos;s white horse?</label>
-            <input
-              type="text"
-              dir="auto"
-              id="horse"
-              name="horse"
-              placeholder="e.g. brown"
-              value={answers.horse}
-              onChange={handleChange}
-              autoComplete="off"
-              required
-            />
-          </p>
+      <h1> Quiz </h1>
+      <form onSubmit={handleSubmit}>
+        <p>
+          <Label htmlFor="sum">What is 2+2?</Label>
+          <Input
+            type="text"
+            dir="auto"
+            id="sum"
+            name="sum"
+            placeholder="e.g. 3"
+            value={answers.sum}
+            onChange={handleChange}
+            autoComplete="off"
+            required
+          />
+        </p>
+        <p>
+          <Label htmlFor="horse">What color was Napoleon&apos;s white horse?</Label>
+          <Input
+            type="text"
+            dir="auto"
+            id="horse"
+            name="horse"
+            placeholder="e.g. brown"
+            value={answers.horse}
+            onChange={handleChange}
+            autoComplete="off"
+            required
+          />
+        </p>
 
-          <p>
-            <button type="button" onClick={onPrev} disabled={!hasPrev}>
-              Back to instructions
-            </button>
-            <button type="submit">Submit</button>
-          </p>
-        </form>
-      </div>
+        <p>
+          <Button type="button" onClick={onPrev} disabled={!hasPrev}>
+            Back to instructions
+          </Button>
+          <Button type="submit">Submit</Button>
+        </p>
+      </form>
     </Centered>
   );
 };
