@@ -25,4 +25,25 @@ if (process.env.NODE_ENV !== 'production') {
   );
 }
 
+export const logInfo = message => {
+  logger.log({
+    level: 'info',
+    message,
+  });
+};
+
+export const logDebug = message => {
+  logger.log({
+    level: 'debug',
+    message,
+  });
+};
+
+export const logError = message => {
+  logger.log({
+    level: 'error',
+    message,
+  });
+};
+
 export default logger;
