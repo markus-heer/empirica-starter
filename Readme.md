@@ -4,16 +4,10 @@ _This project was generated with [create-empirica-app](https://github.com/empiri
 
 ## Getting started
 
-In order to run this, you have to clone the custom [empirica-core](https://github.com/markus-heer/meteor-empirica-core) into a `packages/meteor-empirica-core` folder in the root of the project:
-
-```sh
-mkdir packages && cd packages && git clone https://github.com/markus-heer/meteor-empirica-core
-```
-
 To run this project locally, run the local server:
 
 ```sh
-meteor
+npm start
 ```
 
 ## Introduction

@@ -1,0 +1,4 @@
+[submodule "meteor-empirica-core"]
+	path = packages/meteor-empirica-core
+	url = https://github.com/markus-heer/meteor-empirica-core
+	branch = custom
